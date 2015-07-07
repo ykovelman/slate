@@ -5,6 +5,7 @@ language_tabs:
   - shell
   - ruby
   - python
+  - java
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -18,9 +19,9 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the MJM Shipping API! You can use our API to access MJM Shipping API endpoints, which can get information on various quotes, shipment bookings, shipment tracking in our database.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have language bindings in Shell, Ruby, Python, and Java! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
@@ -29,34 +30,54 @@ This example API documentation page was created with [Slate](http://github.com/t
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'mjm'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = MJM::APIClient.authorize!('shipment')
 ```
 
 ```python
-import kittn
+import mjm
 
-api = kittn.authorize('meowmeowmeow')
+api = mjm.authorize('shipment')
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: shipment"
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `shipment` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+MJM Shipping uses API keys to allow access to the API. You can register a new MJM Shipping API key at our [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+MJM Shipping expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>shipping</code> with your personal API key.
 </aside>
+
+# Quotes
+
+## Post Quote
+
+This endpoint creates a new quote
+
+### HTTP Request
+
+`POST http://www.saatchiart.com/mjm/api/v1/quotes`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to retrieve
+
+### JSON object
+
+# Bookings
 
 # Kittens
 
